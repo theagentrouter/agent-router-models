@@ -188,7 +188,7 @@ One provider surface, two catalogs: Anthropic's models go in `vertexanthropic.js
 other model in `vertex.json`. Google renames this product often; the path is the stable
 handle, not the name on the page.
 
-- For `vertex.json`, use the documented model ID with this user-approved publisher
+- For `vertex.json`, use the documented model ID with this publisher
   mapping: xAI → `xai/`, Mistral (including Codestral) → `mistralai/`,
   DeepSeek → `deepseek-ai/`, Kimi → `moonshotai/`, MiniMax → `minimaxai/`,
   GPT-OSS → `openai/`, Qwen → `qwen/`, Llama → `meta/`, E5 → `intfloat/`,
@@ -338,9 +338,9 @@ These recur every run. Decide them the same way each time.
 ## The changelog block
 
 Write one block at the top of `CHANGELOG.md`, headed `# YYYY-MM-DD MODEL UPDATE` with
-today's date. Run the `simple-english` skill over the block before you finish.
+today's date, in plain English.
 
-The block is for customers. The body carries what a customer acts on. Notes carry the rest.
+The block is for people who use the catalogs. The body carries what they act on. Notes carry the rest.
 
 Body sections, in order: **New Models**, **Price Changes**, **Deprecated Models**,
 **Retired Models**, **Other Updates**. Prefix every entry with the provider in brackets:
@@ -357,3 +357,8 @@ of the schema vocabulary go under **Schema and catalog changes**, never in the b
 
 A correction to an earlier block goes under **Corrections to earlier updates** with the date
 of the block you are correcting. Past blocks stay as written.
+
+## The pull request
+
+Sign off every commit with `git commit -s`, and say in the pull request that an AI tool was used.
+[CONTRIBUTING.md](../../../CONTRIBUTING.md) has the rest.

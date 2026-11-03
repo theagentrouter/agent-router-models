@@ -23,11 +23,8 @@ jobs:
       - run: bun tests/validate-cli.test.ts
       - name: Type check
         run: bunx typescript@5.9.3 --noEmit --strict --target es2022 tests/models.typecheck.ts
-      # This also fails when a model's retirement date has passed, whatever a pull request changes,
-      # so it shows the result without blocking.
       - name: Validate the catalogs
         run: bun scripts/validate-catalogs.ts
-        continue-on-error: true
 
   sign-off:
     if: github.event_name == 'pull_request'
